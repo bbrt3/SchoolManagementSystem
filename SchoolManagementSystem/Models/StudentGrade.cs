@@ -18,6 +18,7 @@ namespace SchoolManagementSystem.Models
         public int CourseID { get; set; }
         public int StudentID { get; set; }
         public Nullable<decimal> Grade { get; set; }
+        public int ECTS { get; set; }
     
         public virtual Course Course { get; set; }
         public virtual Person Person { get; set; }

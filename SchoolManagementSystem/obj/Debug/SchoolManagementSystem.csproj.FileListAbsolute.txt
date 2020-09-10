@@ -17,3 +17,5 @@ C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSy
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\SchoolDatabase.mdf
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\SchoolDatabase_log.ldf
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.SettingsPage.resources
+C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.UserGrades.resources
+C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.Models.UserCourses.resources

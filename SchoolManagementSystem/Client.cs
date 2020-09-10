@@ -1,4 +1,5 @@
 ﻿using Microsoft.Build.BuildEngine;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.UserControls;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,20 @@ namespace SchoolManagementSystem
             }
         }
 
+        private static int _ID;
+
+        public static int ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                _ID = value;
+            }
+        }
+
         public Client()
         {
             InitializeComponent();
@@ -44,7 +59,7 @@ namespace SchoolManagementSystem
             if (!PanelContent.Contains(LoginPage.Instance))
             {
                 PanelContent.Controls.Add(LoginPage.Instance);
-                
+
                 LoginPage.Instance.Dock = DockStyle.Fill;
             }
         }
@@ -90,6 +105,10 @@ namespace SchoolManagementSystem
                 PanelContent.Controls.Add(SettingsPage.Instance);
                 SettingsPage.Instance.Dock = DockStyle.Fill;
             }
+            else
+            {
+                SettingsPage.Instance.BringToFront();
+            }
         }
 
         private void Client_Resize(object sender, EventArgs e)
@@ -110,6 +129,39 @@ namespace SchoolManagementSystem
 
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void BtnUserGrades_Click(object sender, EventArgs e)
+        {
+            if (!PanelContent.Contains(UserGrades.Instance))
+            {
+                PanelContent.Controls.Add(UserGrades.Instance);
+                UserGrades.Instance.BringToFront();
+                UserGrades.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                UserGrades.Instance.BringToFront();
+            }
+        }
+
+        private void BtnUserCourses_Click(object sender, EventArgs e)
+        {
+            if (!PanelContent.Contains(UserCourses.Instance))
+            {
+                PanelContent.Controls.Add(UserCourses.Instance);
+                UserCourses.Instance.BringToFront();
+                UserCourses.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                UserCourses.Instance.BringToFront();
+            }
+        }
+
+        private void BtnUserAssignments_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

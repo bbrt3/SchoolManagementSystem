@@ -77,6 +77,7 @@
     <Property Name="Grade" Type="Decimal" Precision="3" Scale="2" />
     <NavigationProperty Name="Course" Relationship="Self.FK_StudentGrade_Course" FromRole="StudentGrade" ToRole="Course" />
     <NavigationProperty Name="Person" Relationship="Self.FK_StudentGrade_Student" FromRole="StudentGrade" ToRole="Person" />
+    <Property Name="ECTS" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_Course_Department">
     <End Role="Department" Type="Self.Department" Multiplicity="1" />

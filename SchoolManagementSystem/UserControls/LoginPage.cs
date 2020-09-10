@@ -60,7 +60,8 @@ namespace SchoolManagementSystem
 
                     Int32 ID;
                     Int32.TryParse(TxtUsername.Text.Trim(), out ID);
-
+                    Client.ID = ID;
+                    
                     var queryStudent = from o in db.Person
                                        where o.PersonID.Equals(ID) && o.Password.Equals(TxtPassword.Text) && o.Discriminator.Equals("Student")
                                        select o;
@@ -110,5 +111,6 @@ namespace SchoolManagementSystem
 
             BtnLogin.Location = new Point((LoginPage.Instance.Width / 2) - 119, (LoginPage.Instance.Height / 2)+135);
         }
+
     }
 }

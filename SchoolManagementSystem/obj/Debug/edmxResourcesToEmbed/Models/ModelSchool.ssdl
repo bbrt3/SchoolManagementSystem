@@ -71,6 +71,7 @@
     <Property Name="CourseID" Type="int" Nullable="false" />
     <Property Name="StudentID" Type="int" Nullable="false" />
     <Property Name="Grade" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="ECTS" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Course_Department">
     <End Role="Department" Type="Self.Department" Multiplicity="1" />

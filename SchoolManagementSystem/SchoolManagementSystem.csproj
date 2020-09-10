@@ -92,6 +92,12 @@
     <Compile Include="Models\GetStudentGrades_Result.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserCourses.Designer.cs">
+      <DependentUpon>UserCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,8 +142,17 @@
     <Compile Include="UserControls\SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserGrades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserGrades.Designer.cs">
+      <DependentUpon>UserGrades.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserCourses.resx">
+      <DependentUpon>UserCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -155,6 +170,9 @@
     <EmbeddedResource Include="UserControls\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserGrades.resx">
+      <DependentUpon>UserGrades.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Models\ModelSchool.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelSchool.Designer.cs</LastGenOutput>
@@ -163,6 +181,9 @@
       <DependentUpon>ModelSchool.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.GetStudentGrades_Result.datasource" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnlineCourse.datasource" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnsiteCourse.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

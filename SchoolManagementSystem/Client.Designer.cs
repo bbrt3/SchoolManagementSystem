@@ -49,8 +49,8 @@
             this.BtnAdminCourses = new System.Windows.Forms.Button();
             this.BtnAdminUsers = new System.Windows.Forms.Button();
             this.BtnAdminPanel = new System.Windows.Forms.Button();
-            this.PictureSideMenuLogo = new System.Windows.Forms.PictureBox();
             this.PanelContent = new System.Windows.Forms.Panel();
+            this.PictureSideMenuLogo = new System.Windows.Forms.PictureBox();
             this.PanelSideMenu.SuspendLayout();
             this.PanelUserMain.SuspendLayout();
             this.PanelTeacherMain.SuspendLayout();
@@ -137,6 +137,7 @@
             this.BtnUserAssignments.TabIndex = 3;
             this.BtnUserAssignments.Text = "Assignments";
             this.BtnUserAssignments.UseVisualStyleBackColor = false;
+            this.BtnUserAssignments.Click += new System.EventHandler(this.BtnUserAssignments_Click);
             // 
             // BtnUserCourses
             // 
@@ -152,6 +153,7 @@
             this.BtnUserCourses.TabIndex = 2;
             this.BtnUserCourses.Text = "Courses";
             this.BtnUserCourses.UseVisualStyleBackColor = false;
+            this.BtnUserCourses.Click += new System.EventHandler(this.BtnUserCourses_Click);
             // 
             // BtnUserGrades
             // 
@@ -167,6 +169,7 @@
             this.BtnUserGrades.TabIndex = 1;
             this.BtnUserGrades.Text = "Grades";
             this.BtnUserGrades.UseVisualStyleBackColor = false;
+            this.BtnUserGrades.Click += new System.EventHandler(this.BtnUserGrades_Click);
             // 
             // BtnUserPanel
             // 
@@ -364,6 +367,15 @@
             this.BtnAdminPanel.Text = "Admin panel";
             this.BtnAdminPanel.UseVisualStyleBackColor = false;
             // 
+            // PanelContent
+            // 
+            this.PanelContent.BackColor = System.Drawing.Color.MidnightBlue;
+            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContent.Location = new System.Drawing.Point(200, 0);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(674, 696);
+            this.PanelContent.TabIndex = 1;
+            // 
             // PictureSideMenuLogo
             // 
             this.PictureSideMenuLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -375,15 +387,6 @@
             this.PictureSideMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PictureSideMenuLogo.TabIndex = 0;
             this.PictureSideMenuLogo.TabStop = false;
-            // 
-            // PanelContent
-            // 
-            this.PanelContent.BackColor = System.Drawing.Color.MidnightBlue;
-            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContent.Location = new System.Drawing.Point(200, 0);
-            this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(674, 696);
-            this.PanelContent.TabIndex = 1;
             // 
             // Client
             // 

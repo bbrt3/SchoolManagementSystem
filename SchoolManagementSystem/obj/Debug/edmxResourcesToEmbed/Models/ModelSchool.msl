@@ -65,6 +65,7 @@
     <EntitySetMapping Name="StudentGrade">
       <EntityTypeMapping TypeName="SchoolDatabaseModel.StudentGrade">
         <MappingFragment StoreEntitySet="StudentGrade">
+          <ScalarProperty Name="ECTS" ColumnName="ECTS" />
           <ScalarProperty Name="EnrollmentID" ColumnName="EnrollmentID" />
           <ScalarProperty Name="CourseID" ColumnName="CourseID" />
           <ScalarProperty Name="StudentID" ColumnName="StudentID" />
