@@ -112,5 +112,9 @@ namespace SchoolManagementSystem
             BtnLogin.Location = new Point((LoginPage.Instance.Width / 2) - 119, (LoginPage.Instance.Height / 2)+135);
         }
 
+        private void LoginPage_Enter(object sender, EventArgs e)
+        {
+            Client.Instance.AcceptButton = BtnLogin;
+        }
     }
 }

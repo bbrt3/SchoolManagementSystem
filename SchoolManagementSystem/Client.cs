@@ -159,9 +159,18 @@ namespace SchoolManagementSystem
             }
         }
 
-        private void BtnUserAssignments_Click(object sender, EventArgs e)
+        private void BtnAdminUsers_Click(object sender, EventArgs e)
         {
-
+            if(!PanelContent.Contains(AdminUsers.Instance))
+            {
+                PanelContent.Controls.Add(AdminUsers.Instance);
+                AdminUsers.Instance.BringToFront();
+                AdminUsers.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                AdminUsers.Instance.BringToFront();
+            }
         }
     }
 }

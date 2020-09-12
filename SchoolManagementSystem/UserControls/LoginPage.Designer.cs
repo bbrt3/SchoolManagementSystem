@@ -111,6 +111,7 @@
             this.Controls.Add(this.LabelUsername);
             this.Name = "LoginPage";
             this.Size = new System.Drawing.Size(890, 735);
+            this.Enter += new System.EventHandler(this.LoginPage_Enter);
             this.Resize += new System.EventHandler(this.LoginPage_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
             this.ResumeLayout(false);

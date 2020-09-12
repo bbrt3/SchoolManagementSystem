@@ -33,7 +33,6 @@
             this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.PanelUserMain = new System.Windows.Forms.Panel();
-            this.BtnUserAssignments = new System.Windows.Forms.Button();
             this.BtnUserCourses = new System.Windows.Forms.Button();
             this.BtnUserGrades = new System.Windows.Forms.Button();
             this.BtnUserPanel = new System.Windows.Forms.Button();
@@ -84,7 +83,7 @@
             this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BtnLogout.ForeColor = System.Drawing.Color.White;
-            this.BtnLogout.Location = new System.Drawing.Point(0, 629);
+            this.BtnLogout.Location = new System.Drawing.Point(0, 591);
             this.BtnLogout.Name = "BtnLogout";
             this.BtnLogout.Size = new System.Drawing.Size(200, 33);
             this.BtnLogout.TabIndex = 6;
@@ -102,7 +101,7 @@
             this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BtnSettings.ForeColor = System.Drawing.Color.White;
-            this.BtnSettings.Location = new System.Drawing.Point(0, 596);
+            this.BtnSettings.Location = new System.Drawing.Point(0, 558);
             this.BtnSettings.Name = "BtnSettings";
             this.BtnSettings.Size = new System.Drawing.Size(200, 33);
             this.BtnSettings.TabIndex = 5;
@@ -112,32 +111,15 @@
             // 
             // PanelUserMain
             // 
-            this.PanelUserMain.Controls.Add(this.BtnUserAssignments);
             this.PanelUserMain.Controls.Add(this.BtnUserCourses);
             this.PanelUserMain.Controls.Add(this.BtnUserGrades);
             this.PanelUserMain.Controls.Add(this.BtnUserPanel);
             this.PanelUserMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelUserMain.Location = new System.Drawing.Point(0, 462);
             this.PanelUserMain.Name = "PanelUserMain";
-            this.PanelUserMain.Size = new System.Drawing.Size(200, 134);
+            this.PanelUserMain.Size = new System.Drawing.Size(200, 96);
             this.PanelUserMain.TabIndex = 3;
             this.PanelUserMain.Visible = false;
-            // 
-            // BtnUserAssignments
-            // 
-            this.BtnUserAssignments.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.BtnUserAssignments.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnUserAssignments.FlatAppearance.BorderSize = 0;
-            this.BtnUserAssignments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUserAssignments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BtnUserAssignments.ForeColor = System.Drawing.Color.White;
-            this.BtnUserAssignments.Location = new System.Drawing.Point(0, 99);
-            this.BtnUserAssignments.Name = "BtnUserAssignments";
-            this.BtnUserAssignments.Size = new System.Drawing.Size(200, 33);
-            this.BtnUserAssignments.TabIndex = 3;
-            this.BtnUserAssignments.Text = "Assignments";
-            this.BtnUserAssignments.UseVisualStyleBackColor = false;
-            this.BtnUserAssignments.Click += new System.EventHandler(this.BtnUserAssignments_Click);
             // 
             // BtnUserCourses
             // 
@@ -350,6 +332,7 @@
             this.BtnAdminUsers.TabIndex = 1;
             this.BtnAdminUsers.Text = "Users";
             this.BtnAdminUsers.UseVisualStyleBackColor = false;
+            this.BtnAdminUsers.Click += new System.EventHandler(this.BtnAdminUsers_Click);
             // 
             // BtnAdminPanel
             // 
@@ -420,7 +403,6 @@
         private System.Windows.Forms.Button BtnAdminPanel;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.Button BtnSettings;
-        private System.Windows.Forms.Button BtnUserAssignments;
         private System.Windows.Forms.Button BtnUserCourses;
         private System.Windows.Forms.Button BtnUserGrades;
         private System.Windows.Forms.Button BtnUserPanel;
