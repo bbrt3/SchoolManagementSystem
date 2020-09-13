@@ -92,6 +92,12 @@
     <Compile Include="Models\GetStudentGrades_Result.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AdminCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminCourses.Designer.cs">
+      <DependentUpon>AdminCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AdminUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminCourses.resx">
+      <DependentUpon>AdminCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +199,7 @@
       <DependentUpon>ModelSchool.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.Course.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.GetStudentGrades_Result.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnlineCourse.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnsiteCourse.datasource" />
