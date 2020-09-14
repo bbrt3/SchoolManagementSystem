@@ -46,6 +46,8 @@
             this.comboBoxCredits = new System.Windows.Forms.ComboBox();
             this.comboBoxDepartments = new System.Windows.Forms.ComboBox();
             this.comboBoxInstructors = new System.Windows.Forms.ComboBox();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.LabelSearch = new System.Windows.Forms.Label();
             this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.onsiteCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,7 +58,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courseIDDataGridViewTextBoxColumn,
@@ -100,10 +104,10 @@
             // LabelHeaderText
             // 
             this.LabelHeaderText.AutoSize = true;
-            this.LabelHeaderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelHeaderText.Location = new System.Drawing.Point(236, 0);
+            this.LabelHeaderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LabelHeaderText.Location = new System.Drawing.Point(239, 0);
             this.LabelHeaderText.Name = "LabelHeaderText";
-            this.LabelHeaderText.Size = new System.Drawing.Size(208, 53);
+            this.LabelHeaderText.Size = new System.Drawing.Size(195, 51);
             this.LabelHeaderText.TabIndex = 1;
             this.LabelHeaderText.Text = "Courses:";
             // 
@@ -111,7 +115,7 @@
             // 
             this.LabelNewCourse.AutoSize = true;
             this.LabelNewCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelNewCourse.Location = new System.Drawing.Point(276, 76);
+            this.LabelNewCourse.Location = new System.Drawing.Point(282, 58);
             this.LabelNewCourse.Name = "LabelNewCourse";
             this.LabelNewCourse.Size = new System.Drawing.Size(121, 25);
             this.LabelNewCourse.TabIndex = 1;
@@ -120,7 +124,7 @@
             // LabelTitle
             // 
             this.LabelTitle.AutoSize = true;
-            this.LabelTitle.Location = new System.Drawing.Point(236, 122);
+            this.LabelTitle.Location = new System.Drawing.Point(242, 104);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(30, 13);
             this.LabelTitle.TabIndex = 2;
@@ -128,7 +132,7 @@
             // 
             // TxtTitle
             // 
-            this.TxtTitle.Location = new System.Drawing.Point(307, 119);
+            this.TxtTitle.Location = new System.Drawing.Point(313, 101);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(121, 20);
             this.TxtTitle.TabIndex = 0;
@@ -136,7 +140,7 @@
             // LabelCredits
             // 
             this.LabelCredits.AutoSize = true;
-            this.LabelCredits.Location = new System.Drawing.Point(236, 148);
+            this.LabelCredits.Location = new System.Drawing.Point(242, 130);
             this.LabelCredits.Name = "LabelCredits";
             this.LabelCredits.Size = new System.Drawing.Size(42, 13);
             this.LabelCredits.TabIndex = 2;
@@ -145,7 +149,7 @@
             // LabelCourseID
             // 
             this.LabelCourseID.AutoSize = true;
-            this.LabelCourseID.Location = new System.Drawing.Point(236, 177);
+            this.LabelCourseID.Location = new System.Drawing.Point(242, 159);
             this.LabelCourseID.Name = "LabelCourseID";
             this.LabelCourseID.Size = new System.Drawing.Size(21, 13);
             this.LabelCourseID.TabIndex = 2;
@@ -154,7 +158,7 @@
             // LabelDepartment
             // 
             this.LabelDepartment.AutoSize = true;
-            this.LabelDepartment.Location = new System.Drawing.Point(236, 201);
+            this.LabelDepartment.Location = new System.Drawing.Point(242, 183);
             this.LabelDepartment.Name = "LabelDepartment";
             this.LabelDepartment.Size = new System.Drawing.Size(65, 13);
             this.LabelDepartment.TabIndex = 2;
@@ -163,7 +167,7 @@
             // LabelInstructor
             // 
             this.LabelInstructor.AutoSize = true;
-            this.LabelInstructor.Location = new System.Drawing.Point(236, 228);
+            this.LabelInstructor.Location = new System.Drawing.Point(242, 210);
             this.LabelInstructor.Name = "LabelInstructor";
             this.LabelInstructor.Size = new System.Drawing.Size(54, 13);
             this.LabelInstructor.TabIndex = 2;
@@ -173,7 +177,7 @@
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.HotPink;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Location = new System.Drawing.Point(239, 251);
+            this.BtnAdd.Location = new System.Drawing.Point(245, 233);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(189, 23);
             this.BtnAdd.TabIndex = 5;
@@ -183,7 +187,7 @@
             // 
             // TxtID
             // 
-            this.TxtID.Location = new System.Drawing.Point(307, 170);
+            this.TxtID.Location = new System.Drawing.Point(313, 152);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(121, 20);
             this.TxtID.TabIndex = 2;
@@ -202,7 +206,7 @@
             "6",
             "7",
             "8"});
-            this.comboBoxCredits.Location = new System.Drawing.Point(307, 145);
+            this.comboBoxCredits.Location = new System.Drawing.Point(313, 127);
             this.comboBoxCredits.Name = "comboBoxCredits";
             this.comboBoxCredits.Size = new System.Drawing.Size(121, 21);
             this.comboBoxCredits.TabIndex = 1;
@@ -212,7 +216,7 @@
             this.comboBoxDepartments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepartments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxDepartments.FormattingEnabled = true;
-            this.comboBoxDepartments.Location = new System.Drawing.Point(307, 196);
+            this.comboBoxDepartments.Location = new System.Drawing.Point(313, 178);
             this.comboBoxDepartments.Name = "comboBoxDepartments";
             this.comboBoxDepartments.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDepartments.TabIndex = 3;
@@ -222,10 +226,27 @@
             this.comboBoxInstructors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInstructors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxInstructors.FormattingEnabled = true;
-            this.comboBoxInstructors.Location = new System.Drawing.Point(307, 224);
+            this.comboBoxInstructors.Location = new System.Drawing.Point(313, 206);
             this.comboBoxInstructors.Name = "comboBoxInstructors";
             this.comboBoxInstructors.Size = new System.Drawing.Size(121, 21);
             this.comboBoxInstructors.TabIndex = 4;
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(65, 265);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(606, 20);
+            this.TxtSearch.TabIndex = 6;
+            this.TxtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            // 
+            // LabelSearch
+            // 
+            this.LabelSearch.AutoSize = true;
+            this.LabelSearch.Location = new System.Drawing.Point(15, 268);
+            this.LabelSearch.Name = "LabelSearch";
+            this.LabelSearch.Size = new System.Drawing.Size(44, 13);
+            this.LabelSearch.TabIndex = 7;
+            this.LabelSearch.Text = "Search:";
             // 
             // courseIDDataGridViewTextBoxColumn
             // 
@@ -246,6 +267,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.Controls.Add(this.LabelSearch);
+            this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.comboBoxInstructors);
             this.Controls.Add(this.comboBoxDepartments);
@@ -295,5 +318,7 @@
         private System.Windows.Forms.ComboBox comboBoxCredits;
         private System.Windows.Forms.ComboBox comboBoxDepartments;
         private System.Windows.Forms.ComboBox comboBoxInstructors;
+        private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Label LabelSearch;
     }
 }

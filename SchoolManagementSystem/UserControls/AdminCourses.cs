@@ -110,46 +110,52 @@ namespace SchoolManagementSystem.UserControls
                     // removing by selecting courseid cell to delete
 
                     // TODO: adding entry to onsite / online course and fixing courseinstructor table because its gonna crash when deleting base entries
-
-                    int val;
-                    int.TryParse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString(), out val);
-
-                    using (var db = new SchoolEntities())
+                    try
                     {
-                        var query = from o in db.Course
-                                    where o.CourseID.Equals(val)
-                                    select o;
+                        int val;
+                        int.TryParse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString(), out val);
 
-                        var queryOnline = from o in db.OnlineCourse
-                                          where o.CourseID.Equals(val)
-                                          select o;
-
-                        var queryOnsite = from o in db.OnsiteCourse
-                                          where o.CourseID.Equals(val)
-                                          select o;
-
-                        var queryGrades = from o in db.StudentGrade
-                                          where o.CourseID.Equals(val)
-                                          select o;
-
-                        db.Course.Remove(query.First());
-                        
-                        if(queryOnline.FirstOrDefault() != null)
+                        using (var db = new SchoolEntities())
                         {
-                            db.OnlineCourse.Remove(queryOnline.First());
-                        }
-                        if(queryOnsite.FirstOrDefault() != null)
-                        {
-                            db.OnsiteCourse.Remove(queryOnsite.First());
-                        }
-                        if(queryGrades.FirstOrDefault() != null)
-                        {
-                            db.StudentGrade.RemoveRange(queryGrades.ToArray());
-                        }
+                            var query = from o in db.Course
+                                        where o.CourseID.Equals(val)
+                                        select o;
 
-                        db.SaveChanges();
+                            var queryOnline = from o in db.OnlineCourse
+                                              where o.CourseID.Equals(val)
+                                              select o;
 
-                        dataGridView1.DataSource = db.Course.ToList();
+                            var queryOnsite = from o in db.OnsiteCourse
+                                              where o.CourseID.Equals(val)
+                                              select o;
+
+                            var queryGrades = from o in db.StudentGrade
+                                              where o.CourseID.Equals(val)
+                                              select o;
+
+                            db.Course.Remove(query.First());
+
+                            if (queryOnline.FirstOrDefault() != null)
+                            {
+                                db.OnlineCourse.Remove(queryOnline.First());
+                            }
+                            if (queryOnsite.FirstOrDefault() != null)
+                            {
+                                db.OnsiteCourse.Remove(queryOnsite.First());
+                            }
+                            if (queryGrades.FirstOrDefault() != null)
+                            {
+                                db.StudentGrade.RemoveRange(queryGrades.ToArray());
+                            }
+
+                            db.SaveChanges();
+
+                            dataGridView1.DataSource = db.Course.ToList();
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("You cannot delete essential courses.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
@@ -161,6 +167,25 @@ namespace SchoolManagementSystem.UserControls
             courseBindingSource.EndEdit();
             dataGridView1.Update();
             Client.Instance.AcceptButton = null;
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TxtSearch.Text))
+            {
+                var query = from o in new SchoolEntities().Course
+                            where o.Title.Equals(TxtSearch.Text) || o.CourseID.ToString().Equals(TxtSearch.Text) || o.Credits.ToString().Equals(TxtSearch.Text) || o.DepartmentID.ToString().Equals(TxtSearch.Text)
+                            select o;
+
+                if(query.Count() > 0)
+                {
+                    dataGridView1.DataSource = query.ToList();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = new SchoolEntities().Course.ToList();
+            }
         }
     }
 }
