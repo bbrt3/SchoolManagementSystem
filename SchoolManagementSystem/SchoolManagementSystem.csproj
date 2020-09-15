@@ -98,6 +98,12 @@
     <Compile Include="UserControls\AdminCourses.Designer.cs">
       <DependentUpon>AdminCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AdminDepartments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminDepartments.Designer.cs">
+      <DependentUpon>AdminDepartments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AdminUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="UserControls\AdminCourses.resx">
       <DependentUpon>AdminCourses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminDepartments.resx">
+      <DependentUpon>AdminDepartments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +209,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.Course.datasource" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.Department.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.GetStudentGrades_Result.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnlineCourse.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnsiteCourse.datasource" />

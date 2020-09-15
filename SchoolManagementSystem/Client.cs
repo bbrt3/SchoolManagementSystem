@@ -186,5 +186,19 @@ namespace SchoolManagementSystem
                 AdminCourses.Instance.BringToFront();
             }
         }
+
+        private void BtnAdminDepartments_Click(object sender, EventArgs e)
+        {
+            if (!PanelContent.Contains(AdminDepartments.Instance))
+            {
+                PanelContent.Controls.Add(AdminDepartments.Instance);
+                AdminDepartments.Instance.BringToFront();
+                AdminDepartments.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                AdminDepartments.Instance.BringToFront();
+            }
+        }
     }
 }

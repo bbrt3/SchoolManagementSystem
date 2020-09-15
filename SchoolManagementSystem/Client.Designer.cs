@@ -302,6 +302,7 @@
             this.BtnAdminDepartments.TabIndex = 3;
             this.BtnAdminDepartments.Text = "Departments";
             this.BtnAdminDepartments.UseVisualStyleBackColor = false;
+            this.BtnAdminDepartments.Click += new System.EventHandler(this.BtnAdminDepartments_Click);
             // 
             // BtnAdminCourses
             // 
