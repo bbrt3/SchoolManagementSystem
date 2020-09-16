@@ -104,6 +104,12 @@
     <Compile Include="UserControls\AdminDepartments.Designer.cs">
       <DependentUpon>AdminDepartments.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AdminGrades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminGrades.Designer.cs">
+      <DependentUpon>AdminGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AdminUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     <EmbeddedResource Include="UserControls\AdminDepartments.resx">
       <DependentUpon>AdminDepartments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminGrades.resx">
+      <DependentUpon>AdminGrades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,7 @@
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnlineCourse.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.OnsiteCourse.datasource" />
     <None Include="Properties\DataSources\SchoolManagementSystem.Models.Person.datasource" />
+    <None Include="Properties\DataSources\SchoolManagementSystem.Models.StudentGrade.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

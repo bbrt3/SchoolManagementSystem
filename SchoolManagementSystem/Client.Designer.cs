@@ -287,6 +287,7 @@
             this.BtnAdminGrades.TabIndex = 4;
             this.BtnAdminGrades.Text = "Grades";
             this.BtnAdminGrades.UseVisualStyleBackColor = false;
+            this.BtnAdminGrades.Click += new System.EventHandler(this.BtnAdminGrades_Click);
             // 
             // BtnAdminDepartments
             // 

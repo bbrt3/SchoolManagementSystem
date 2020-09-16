@@ -200,5 +200,19 @@ namespace SchoolManagementSystem
                 AdminDepartments.Instance.BringToFront();
             }
         }
+
+        private void BtnAdminGrades_Click(object sender, EventArgs e)
+        {
+            if (!PanelContent.Contains(AdminGrades.Instance))
+            {
+                PanelContent.Controls.Add(AdminGrades.Instance);
+                AdminGrades.Instance.BringToFront();
+                AdminGrades.Instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                AdminGrades.Instance.BringToFront();
+            }
+        }
     }
 }
