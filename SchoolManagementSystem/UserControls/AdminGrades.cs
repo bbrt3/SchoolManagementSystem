@@ -32,10 +32,10 @@ namespace SchoolManagementSystem.UserControls
 
         private void AdminGrades_Load(object sender, EventArgs e)
         {
-            dataGridViewGrades.DataSource = new SchoolEntities().StudentGrade.ToList();
+            DataGridViewGrades.DataSource = new SchoolEntities().StudentGrade.ToList();
         }
 
-        private void dataGridViewGrades_KeyDown(object sender, KeyEventArgs e)
+        private void DataGridViewGrades_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyData == Keys.Delete)
             {
@@ -44,7 +44,7 @@ namespace SchoolManagementSystem.UserControls
                     using (var db = new SchoolEntities())
                     {
 
-                    var deletedRowId = dataGridViewGrades.SelectedRows[0].Cells[0].Value.ToString();
+                    var deletedRowId = DataGridViewGrades.SelectedRows[0].Cells[0].Value.ToString();
 
                         var query = from o in db.StudentGrade
                                     where o.EnrollmentID.ToString().Equals(deletedRowId)
@@ -56,7 +56,7 @@ namespace SchoolManagementSystem.UserControls
 
                             db.SaveChanges();
 
-                            dataGridViewGrades.DataSource = db.StudentGrade.ToList();
+                            DataGridViewGrades.DataSource = db.StudentGrade.ToList();
                         }
                     }
                 }
@@ -65,7 +65,7 @@ namespace SchoolManagementSystem.UserControls
 
         private void AdminGrades_Leave(object sender, EventArgs e)
         {
-            dataGridViewGrades.EndEdit();
+            DataGridViewGrades.EndEdit();
             Client.Instance.AcceptButton = null;
         }
     }

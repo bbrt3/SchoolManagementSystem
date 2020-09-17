@@ -58,7 +58,7 @@ namespace SchoolManagementSystem
                 using (var db = new SchoolEntities())
                 {
 
-                    Int32 ID;
+                    int ID;
                     Int32.TryParse(TxtUsername.Text.Trim(), out ID);
                     Client.ID = ID;
                     

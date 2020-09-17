@@ -242,6 +242,7 @@
             this.BtnTeacherGrades.TabIndex = 1;
             this.BtnTeacherGrades.Text = "Grades";
             this.BtnTeacherGrades.UseVisualStyleBackColor = false;
+            this.BtnTeacherGrades.Click += new System.EventHandler(this.BtnTeacherGrades_Click);
             // 
             // BtnTeacherPanel
             // 

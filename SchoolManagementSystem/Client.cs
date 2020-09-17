@@ -34,19 +34,7 @@ namespace SchoolManagementSystem
             }
         }
 
-        private static int _ID;
-
-        public static int ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                _ID = value;
-            }
-        }
+        public static int ID { get; set; }
 
         public Client()
         {
@@ -54,15 +42,6 @@ namespace SchoolManagementSystem
             Instance = this;
         }
 
-        private void Client_Load(object sender, EventArgs e)
-        {
-            if (!PanelContent.Contains(LoginPage.Instance))
-            {
-                PanelContent.Controls.Add(LoginPage.Instance);
-
-                LoginPage.Instance.Dock = DockStyle.Fill;
-            }
-        }
 
         public void EnableAdminPanel()
         {
@@ -98,24 +77,12 @@ namespace SchoolManagementSystem
             LoginPage.Instance.Visible = true;
         }
 
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            if(!PanelContent.Contains(SettingsPage.Instance))
-            {
-                PanelContent.Controls.Add(SettingsPage.Instance);
-                SettingsPage.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                SettingsPage.Instance.BringToFront();
-            }
-        }
 
         private void Client_Resize(object sender, EventArgs e)
         {
             PanelSideMenu.Width = (int)(this.Width / 4.5);
         }
-
+        
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
@@ -124,95 +91,67 @@ namespace SchoolManagementSystem
                     if (MessageBox.Show("Do you really want to quit?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                         Close();
                     break;
-
             }
-
-
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void Client_Load(object sender, EventArgs e)
+        {
+            UserControlAction(LoginPage.Instance);
+        }
+
+        private void UserControlAction(Control instance)
+        {   
+            if (!PanelContent.Contains(instance))
+            {
+                PanelContent.Controls.Add(instance);
+                instance.BringToFront();
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                instance.BringToFront();
+            }
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            UserControlAction(SettingsPage.Instance);
         }
 
         private void BtnUserGrades_Click(object sender, EventArgs e)
         {
-            if (!PanelContent.Contains(UserGrades.Instance))
-            {
-                PanelContent.Controls.Add(UserGrades.Instance);
-                UserGrades.Instance.BringToFront();
-                UserGrades.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                UserGrades.Instance.BringToFront();
-            }
+            UserControlAction(UserGrades.Instance);
         }
 
         private void BtnUserCourses_Click(object sender, EventArgs e)
         {
-            if (!PanelContent.Contains(UserCourses.Instance))
-            {
-                PanelContent.Controls.Add(UserCourses.Instance);
-                UserCourses.Instance.BringToFront();
-                UserCourses.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                UserCourses.Instance.BringToFront();
-            }
+            UserControlAction(UserCourses.Instance);
         }
 
         private void BtnAdminUsers_Click(object sender, EventArgs e)
         {
-            if(!PanelContent.Contains(AdminUsers.Instance))
-            {
-                PanelContent.Controls.Add(AdminUsers.Instance);
-                AdminUsers.Instance.BringToFront();
-                AdminUsers.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                AdminUsers.Instance.BringToFront();
-            }
+            UserControlAction(AdminUsers.Instance);
         }
 
         private void BtnAdminCourses_Click(object sender, EventArgs e)
         {
-            if(!PanelContent.Contains(AdminCourses.Instance))
-            {
-                PanelContent.Controls.Add(AdminCourses.Instance);
-                AdminCourses.Instance.BringToFront();
-                AdminCourses.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                AdminCourses.Instance.BringToFront();
-            }
+            UserControlAction(AdminCourses.Instance);
         }
 
         private void BtnAdminDepartments_Click(object sender, EventArgs e)
         {
-            if (!PanelContent.Contains(AdminDepartments.Instance))
-            {
-                PanelContent.Controls.Add(AdminDepartments.Instance);
-                AdminDepartments.Instance.BringToFront();
-                AdminDepartments.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                AdminDepartments.Instance.BringToFront();
-            }
+            UserControlAction(AdminDepartments.Instance);
         }
 
         private void BtnAdminGrades_Click(object sender, EventArgs e)
         {
-            if (!PanelContent.Contains(AdminGrades.Instance))
-            {
-                PanelContent.Controls.Add(AdminGrades.Instance);
-                AdminGrades.Instance.BringToFront();
-                AdminGrades.Instance.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                AdminGrades.Instance.BringToFront();
-            }
+            UserControlAction(AdminGrades.Instance);
+        }
+
+        private void BtnTeacherGrades_Click(object sender, EventArgs e)
+        {
+            UserControlAction(InstructorGrades.Instance);
         }
     }
 }
