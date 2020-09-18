@@ -48,7 +48,7 @@
             this.LabelHeaderText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelHeaderText.AutoSize = true;
             this.LabelHeaderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelHeaderText.Location = new System.Drawing.Point(228, 10);
+            this.LabelHeaderText.Location = new System.Drawing.Point(247, 0);
             this.LabelHeaderText.Name = "LabelHeaderText";
             this.LabelHeaderText.Size = new System.Drawing.Size(175, 53);
             this.LabelHeaderText.TabIndex = 0;
@@ -70,6 +70,7 @@
             this.personDataGridViewTextBoxColumn});
             this.DataGridViewGrades.DataSource = this.studentGradeBindingSource;
             this.DataGridViewGrades.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DataGridViewGrades.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DataGridViewGrades.Location = new System.Drawing.Point(0, 66);
             this.DataGridViewGrades.Name = "DataGridViewGrades";
             this.DataGridViewGrades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -136,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.DataGridViewGrades);
             this.Controls.Add(this.LabelHeaderText);
             this.Name = "AdminGrades";

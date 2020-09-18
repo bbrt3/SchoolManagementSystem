@@ -37,7 +37,6 @@
             this.BtnUserGrades = new System.Windows.Forms.Button();
             this.BtnUserPanel = new System.Windows.Forms.Button();
             this.PanelTeacherMain = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.BtnTeacherAssignments = new System.Windows.Forms.Button();
             this.BtnTeacherCourses = new System.Windows.Forms.Button();
             this.BtnTeacherGrades = new System.Windows.Forms.Button();
@@ -48,8 +47,8 @@
             this.BtnAdminCourses = new System.Windows.Forms.Button();
             this.BtnAdminUsers = new System.Windows.Forms.Button();
             this.BtnAdminPanel = new System.Windows.Forms.Button();
-            this.PictureSideMenuLogo = new System.Windows.Forms.PictureBox();
             this.PanelContent = new System.Windows.Forms.Panel();
+            this.PictureSideMenuLogo = new System.Windows.Forms.PictureBox();
             this.PanelSideMenu.SuspendLayout();
             this.PanelUserMain.SuspendLayout();
             this.PanelTeacherMain.SuspendLayout();
@@ -83,7 +82,7 @@
             this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BtnLogout.ForeColor = System.Drawing.Color.White;
-            this.BtnLogout.Location = new System.Drawing.Point(0, 591);
+            this.BtnLogout.Location = new System.Drawing.Point(0, 527);
             this.BtnLogout.Name = "BtnLogout";
             this.BtnLogout.Size = new System.Drawing.Size(200, 33);
             this.BtnLogout.TabIndex = 6;
@@ -101,7 +100,7 @@
             this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BtnSettings.ForeColor = System.Drawing.Color.White;
-            this.BtnSettings.Location = new System.Drawing.Point(0, 558);
+            this.BtnSettings.Location = new System.Drawing.Point(0, 494);
             this.BtnSettings.Name = "BtnSettings";
             this.BtnSettings.Size = new System.Drawing.Size(200, 33);
             this.BtnSettings.TabIndex = 5;
@@ -115,7 +114,7 @@
             this.PanelUserMain.Controls.Add(this.BtnUserGrades);
             this.PanelUserMain.Controls.Add(this.BtnUserPanel);
             this.PanelUserMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelUserMain.Location = new System.Drawing.Point(0, 462);
+            this.PanelUserMain.Location = new System.Drawing.Point(0, 398);
             this.PanelUserMain.Name = "PanelUserMain";
             this.PanelUserMain.Size = new System.Drawing.Size(200, 96);
             this.PanelUserMain.TabIndex = 3;
@@ -171,7 +170,6 @@
             // 
             // PanelTeacherMain
             // 
-            this.PanelTeacherMain.Controls.Add(this.button6);
             this.PanelTeacherMain.Controls.Add(this.BtnTeacherAssignments);
             this.PanelTeacherMain.Controls.Add(this.BtnTeacherCourses);
             this.PanelTeacherMain.Controls.Add(this.BtnTeacherGrades);
@@ -179,24 +177,9 @@
             this.PanelTeacherMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTeacherMain.Location = new System.Drawing.Point(0, 295);
             this.PanelTeacherMain.Name = "PanelTeacherMain";
-            this.PanelTeacherMain.Size = new System.Drawing.Size(200, 167);
+            this.PanelTeacherMain.Size = new System.Drawing.Size(200, 103);
             this.PanelTeacherMain.TabIndex = 2;
             this.PanelTeacherMain.Visible = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 132);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 33);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // BtnTeacherAssignments
             // 
@@ -212,6 +195,7 @@
             this.BtnTeacherAssignments.TabIndex = 3;
             this.BtnTeacherAssignments.Text = "Assignments";
             this.BtnTeacherAssignments.UseVisualStyleBackColor = false;
+            this.BtnTeacherAssignments.Visible = false;
             // 
             // BtnTeacherCourses
             // 
@@ -227,6 +211,7 @@
             this.BtnTeacherCourses.TabIndex = 2;
             this.BtnTeacherCourses.Text = "Courses";
             this.BtnTeacherCourses.UseVisualStyleBackColor = false;
+            this.BtnTeacherCourses.Click += new System.EventHandler(this.BtnTeacherCourses_Click);
             // 
             // BtnTeacherGrades
             // 
@@ -354,6 +339,15 @@
             this.BtnAdminPanel.Text = "Admin panel";
             this.BtnAdminPanel.UseVisualStyleBackColor = false;
             // 
+            // PanelContent
+            // 
+            this.PanelContent.BackColor = System.Drawing.Color.MidnightBlue;
+            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContent.Location = new System.Drawing.Point(200, 0);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(674, 696);
+            this.PanelContent.TabIndex = 1;
+            // 
             // PictureSideMenuLogo
             // 
             this.PictureSideMenuLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -365,15 +359,6 @@
             this.PictureSideMenuLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PictureSideMenuLogo.TabIndex = 0;
             this.PictureSideMenuLogo.TabStop = false;
-            // 
-            // PanelContent
-            // 
-            this.PanelContent.BackColor = System.Drawing.Color.MidnightBlue;
-            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContent.Location = new System.Drawing.Point(200, 0);
-            this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(674, 696);
-            this.PanelContent.TabIndex = 1;
             // 
             // Client
             // 
@@ -410,7 +395,6 @@
         private System.Windows.Forms.Button BtnUserCourses;
         private System.Windows.Forms.Button BtnUserGrades;
         private System.Windows.Forms.Button BtnUserPanel;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button BtnTeacherAssignments;
         private System.Windows.Forms.Button BtnTeacherCourses;
         private System.Windows.Forms.Button BtnTeacherGrades;

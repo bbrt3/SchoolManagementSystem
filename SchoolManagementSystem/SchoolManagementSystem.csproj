@@ -116,6 +116,12 @@
     <Compile Include="UserControls\AdminUsers.Designer.cs">
       <DependentUpon>AdminUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\InstructorCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\InstructorCourses.Designer.cs">
+      <DependentUpon>InstructorCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\InstructorGrades.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminUsers.resx">
       <DependentUpon>AdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\InstructorCourses.resx">
+      <DependentUpon>InstructorCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\InstructorGrades.resx">
       <DependentUpon>InstructorGrades.cs</DependentUpon>

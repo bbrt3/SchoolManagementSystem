@@ -153,5 +153,10 @@ namespace SchoolManagementSystem
         {
             UserControlAction(InstructorGrades.Instance);
         }
+
+        private void BtnTeacherCourses_Click(object sender, EventArgs e)
+        {
+            UserControlAction(InstructorCourses.Instance);
+        }
     }
 }

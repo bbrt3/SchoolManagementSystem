@@ -56,25 +56,18 @@ namespace SchoolManagementSystem.UserControls
                 using (var db = new SchoolEntities())
                 {
                     // converting id text to number
-
-                    Int32 ID;
-                    Int32.TryParse(TxtID.Text, out ID);
+                    Int32.TryParse(TxtID.Text, out Int32 ID);
 
                     // converting department name to department id
-
                     var deptID = from o in db.Department
                                  where o.Name.Equals(comboBoxDepartments.SelectedItem.ToString())
                                  select o.DepartmentID;
 
-                    Int32 finalDeptID;
-                    Int32.TryParse(deptID.First().ToString(), out finalDeptID);
+                    Int32.TryParse(deptID.First().ToString(), out Int32 finalDeptID);
 
 
                     // converting credits from combobox selection to number
-
-                    Int32 credits;
-                    Int32.TryParse(comboBoxCredits.SelectedItem.ToString(), out credits);
-
+                    Int32.TryParse(comboBoxCredits.SelectedItem.ToString(), out Int32 credits);
 
                     var course = new Course { CourseID = ID, Title = TxtTitle.Text, Credits = credits, DepartmentID = finalDeptID };
                     db.Course.Add(course);

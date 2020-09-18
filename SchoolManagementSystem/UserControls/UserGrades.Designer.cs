@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewGrades = new System.Windows.Forms.DataGridView();
+            this.getStudentGradesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LabelGrades = new System.Windows.Forms.Label();
             this.enrollmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getStudentGradesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getStudentGradesResultBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,25 +54,30 @@
             this.gradeDataGridViewTextBoxColumn,
             this.studentIDDataGridViewTextBoxColumn});
             this.dataGridViewGrades.DataSource = this.getStudentGradesResultBindingSource;
-            this.dataGridViewGrades.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewGrades.Location = new System.Drawing.Point(261, 202);
+            this.dataGridViewGrades.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewGrades.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewGrades.Location = new System.Drawing.Point(0, 63);
             this.dataGridViewGrades.Name = "dataGridViewGrades";
             this.dataGridViewGrades.ReadOnly = true;
             this.dataGridViewGrades.ShowCellErrors = false;
             this.dataGridViewGrades.ShowCellToolTips = false;
             this.dataGridViewGrades.ShowEditingIcon = false;
             this.dataGridViewGrades.ShowRowErrors = false;
-            this.dataGridViewGrades.Size = new System.Drawing.Size(205, 301);
+            this.dataGridViewGrades.Size = new System.Drawing.Size(674, 633);
             this.dataGridViewGrades.TabIndex = 0;
+            // 
+            // getStudentGradesResultBindingSource
+            // 
+            this.getStudentGradesResultBindingSource.DataSource = typeof(SchoolManagementSystem.Models.GetStudentGrades_Result);
             // 
             // LabelGrades
             // 
             this.LabelGrades.AutoSize = true;
-            this.LabelGrades.BackColor = System.Drawing.Color.White;
-            this.LabelGrades.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelGrades.Location = new System.Drawing.Point(262, 161);
+            this.LabelGrades.BackColor = System.Drawing.Color.Transparent;
+            this.LabelGrades.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LabelGrades.Location = new System.Drawing.Point(204, 0);
             this.LabelGrades.Name = "LabelGrades";
-            this.LabelGrades.Size = new System.Drawing.Size(204, 38);
+            this.LabelGrades.Size = new System.Drawing.Size(288, 53);
             this.LabelGrades.TabIndex = 1;
             this.LabelGrades.Text = "Your grades:";
             // 
@@ -94,6 +99,7 @@
             // 
             // gradeDataGridViewTextBoxColumn
             // 
+            this.gradeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
             this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
             this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
@@ -107,19 +113,15 @@
             this.studentIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.studentIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // getStudentGradesResultBindingSource
-            // 
-            this.getStudentGradesResultBindingSource.DataSource = typeof(SchoolManagementSystem.Models.GetStudentGrades_Result);
-            // 
             // UserGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.LabelGrades);
             this.Controls.Add(this.dataGridViewGrades);
             this.Name = "UserGrades";
-            this.Size = new System.Drawing.Size(890, 735);
+            this.Size = new System.Drawing.Size(674, 696);
             this.Resize += new System.EventHandler(this.UserGrades_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGrades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getStudentGradesResultBindingSource)).EndInit();
@@ -131,10 +133,10 @@
         #endregion
         private System.Windows.Forms.BindingSource getStudentGradesResultBindingSource;
         private System.Windows.Forms.DataGridView dataGridViewGrades;
+        private System.Windows.Forms.Label LabelGrades;
         private System.Windows.Forms.DataGridViewTextBoxColumn enrollmentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label LabelGrades;
     }
 }

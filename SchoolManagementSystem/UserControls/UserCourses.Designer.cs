@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
-            this.LabelCourses = new System.Windows.Forms.Label();
             this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.daysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onsiteCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LabelCourses = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onsiteCourseBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.dataGridViewCourses.AllowUserToAddRows = false;
             this.dataGridViewCourses.AllowUserToDeleteRows = false;
             this.dataGridViewCourses.AutoGenerateColumns = false;
+            this.dataGridViewCourses.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courseIDDataGridViewTextBoxColumn,
@@ -54,23 +55,13 @@
             this.timeDataGridViewTextBoxColumn,
             this.courseDataGridViewTextBoxColumn});
             this.dataGridViewCourses.DataSource = this.onsiteCourseBindingSource;
-            this.dataGridViewCourses.Location = new System.Drawing.Point(108, 223);
+            this.dataGridViewCourses.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewCourses.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewCourses.Location = new System.Drawing.Point(0, 68);
             this.dataGridViewCourses.Name = "dataGridViewCourses";
             this.dataGridViewCourses.ReadOnly = true;
-            this.dataGridViewCourses.Size = new System.Drawing.Size(445, 309);
+            this.dataGridViewCourses.Size = new System.Drawing.Size(674, 628);
             this.dataGridViewCourses.TabIndex = 0;
-            // 
-            // LabelCourses
-            // 
-            this.LabelCourses.AutoSize = true;
-            this.LabelCourses.BackColor = System.Drawing.Color.White;
-            this.LabelCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelCourses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LabelCourses.Location = new System.Drawing.Point(200, 176);
-            this.LabelCourses.Name = "LabelCourses";
-            this.LabelCourses.Size = new System.Drawing.Size(253, 44);
-            this.LabelCourses.TabIndex = 1;
-            this.LabelCourses.Text = "Your courses:";
             // 
             // courseIDDataGridViewTextBoxColumn
             // 
@@ -88,6 +79,7 @@
             // 
             // daysDataGridViewTextBoxColumn
             // 
+            this.daysDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.daysDataGridViewTextBoxColumn.DataPropertyName = "Days";
             this.daysDataGridViewTextBoxColumn.HeaderText = "Days";
             this.daysDataGridViewTextBoxColumn.Name = "daysDataGridViewTextBoxColumn";
@@ -95,6 +87,7 @@
             // 
             // timeDataGridViewTextBoxColumn
             // 
+            this.timeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
             this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
@@ -113,15 +106,27 @@
             // 
             this.onsiteCourseBindingSource.DataSource = typeof(SchoolManagementSystem.Models.OnsiteCourse);
             // 
+            // LabelCourses
+            // 
+            this.LabelCourses.AutoSize = true;
+            this.LabelCourses.BackColor = System.Drawing.Color.Transparent;
+            this.LabelCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LabelCourses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LabelCourses.Location = new System.Drawing.Point(151, 0);
+            this.LabelCourses.Name = "LabelCourses";
+            this.LabelCourses.Size = new System.Drawing.Size(308, 53);
+            this.LabelCourses.TabIndex = 1;
+            this.LabelCourses.Text = "Your courses:";
+            // 
             // UserCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Wheat;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.LabelCourses);
             this.Controls.Add(this.dataGridViewCourses);
             this.Name = "UserCourses";
-            this.Size = new System.Drawing.Size(890, 735);
+            this.Size = new System.Drawing.Size(674, 696);
             this.Resize += new System.EventHandler(this.UserCourses_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onsiteCourseBindingSource)).EndInit();

@@ -83,6 +83,7 @@
             this.courseDataGridViewTextBoxColumn});
             this.dataGridViewDepartments.DataSource = this.departmentBindingSource;
             this.dataGridViewDepartments.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewDepartments.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridViewDepartments.Location = new System.Drawing.Point(0, 245);
             this.dataGridViewDepartments.MultiSelect = false;
             this.dataGridViewDepartments.Name = "dataGridViewDepartments";
@@ -262,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.comboBoxInstructors);
             this.Controls.Add(this.dateTimeStart);

@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DataGridViewGrades = new System.Windows.Forms.DataGridView();
+            this.enrollmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eCTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentGradeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LabelStudentGrades = new System.Windows.Forms.Label();
             this.LabelNewGrade = new System.Windows.Forms.Label();
             this.LabelCourseID = new System.Windows.Forms.Label();
@@ -39,14 +47,6 @@
             this.ComboBoxStudents = new System.Windows.Forms.ComboBox();
             this.ComboBoxGrades = new System.Windows.Forms.ComboBox();
             this.ComboBoxCourse = new System.Windows.Forms.ComboBox();
-            this.enrollmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eCTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentGradeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewGrades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentGradeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.personDataGridViewTextBoxColumn});
             this.DataGridViewGrades.DataSource = this.studentGradeBindingSource;
             this.DataGridViewGrades.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DataGridViewGrades.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataGridViewGrades.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DataGridViewGrades.Location = new System.Drawing.Point(0, 297);
             this.DataGridViewGrades.Name = "DataGridViewGrades";
             this.DataGridViewGrades.ReadOnly = true;
@@ -78,6 +78,63 @@
             this.DataGridViewGrades.Size = new System.Drawing.Size(674, 399);
             this.DataGridViewGrades.TabIndex = 4;
             this.DataGridViewGrades.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridViewGrades_KeyDown);
+            // 
+            // enrollmentIDDataGridViewTextBoxColumn
+            // 
+            this.enrollmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrollmentID";
+            this.enrollmentIDDataGridViewTextBoxColumn.HeaderText = "EnrollmentID";
+            this.enrollmentIDDataGridViewTextBoxColumn.Name = "enrollmentIDDataGridViewTextBoxColumn";
+            this.enrollmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            this.studentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eCTSDataGridViewTextBoxColumn
+            // 
+            this.eCTSDataGridViewTextBoxColumn.DataPropertyName = "ECTS";
+            this.eCTSDataGridViewTextBoxColumn.HeaderText = "ECTS";
+            this.eCTSDataGridViewTextBoxColumn.Name = "eCTSDataGridViewTextBoxColumn";
+            this.eCTSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eCTSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // personDataGridViewTextBoxColumn
+            // 
+            this.personDataGridViewTextBoxColumn.DataPropertyName = "Person";
+            this.personDataGridViewTextBoxColumn.HeaderText = "Person";
+            this.personDataGridViewTextBoxColumn.Name = "personDataGridViewTextBoxColumn";
+            this.personDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // studentGradeBindingSource
+            // 
+            this.studentGradeBindingSource.DataSource = typeof(SchoolManagementSystem.Models.StudentGrade);
             // 
             // LabelStudentGrades
             // 
@@ -178,63 +235,6 @@
             this.ComboBoxCourse.Name = "ComboBoxCourse";
             this.ComboBoxCourse.Size = new System.Drawing.Size(121, 21);
             this.ComboBoxCourse.TabIndex = 0;
-            // 
-            // enrollmentIDDataGridViewTextBoxColumn
-            // 
-            this.enrollmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrollmentID";
-            this.enrollmentIDDataGridViewTextBoxColumn.HeaderText = "EnrollmentID";
-            this.enrollmentIDDataGridViewTextBoxColumn.Name = "enrollmentIDDataGridViewTextBoxColumn";
-            this.enrollmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            this.studentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gradeDataGridViewTextBoxColumn
-            // 
-            this.gradeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
-            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
-            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eCTSDataGridViewTextBoxColumn
-            // 
-            this.eCTSDataGridViewTextBoxColumn.DataPropertyName = "ECTS";
-            this.eCTSDataGridViewTextBoxColumn.HeaderText = "ECTS";
-            this.eCTSDataGridViewTextBoxColumn.Name = "eCTSDataGridViewTextBoxColumn";
-            this.eCTSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eCTSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // personDataGridViewTextBoxColumn
-            // 
-            this.personDataGridViewTextBoxColumn.DataPropertyName = "Person";
-            this.personDataGridViewTextBoxColumn.HeaderText = "Person";
-            this.personDataGridViewTextBoxColumn.Name = "personDataGridViewTextBoxColumn";
-            this.personDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // studentGradeBindingSource
-            // 
-            this.studentGradeBindingSource.DataSource = typeof(SchoolManagementSystem.Models.StudentGrade);
             // 
             // InstructorGrades
             // 

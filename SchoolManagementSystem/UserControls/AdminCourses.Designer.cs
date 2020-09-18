@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Credits = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LabelHeaderText = new System.Windows.Forms.Label();
             this.LabelNewCourse = new System.Windows.Forms.Label();
             this.LabelTitle = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.comboBoxInstructors = new System.Windows.Forms.ComboBox();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LabelSearch = new System.Windows.Forms.Label();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.onsiteCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
@@ -69,6 +69,7 @@
             this.DepartmentID});
             this.dataGridView1.DataSource = this.courseBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(0, 291);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -80,6 +81,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(674, 405);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
             // 
             // Title
             // 
@@ -100,6 +107,10 @@
             this.DepartmentID.HeaderText = "DepartmentID";
             this.DepartmentID.Name = "DepartmentID";
             this.DepartmentID.Width = 331;
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataSource = typeof(SchoolManagementSystem.Models.Course);
             // 
             // LabelHeaderText
             // 
@@ -235,7 +246,7 @@
             // 
             this.TxtSearch.Location = new System.Drawing.Point(65, 265);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(606, 20);
+            this.TxtSearch.Size = new System.Drawing.Size(597, 20);
             this.TxtSearch.TabIndex = 6;
             this.TxtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
@@ -248,16 +259,6 @@
             this.LabelSearch.TabIndex = 7;
             this.LabelSearch.Text = "Search:";
             // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(SchoolManagementSystem.Models.Course);
-            // 
             // onsiteCourseBindingSource
             // 
             this.onsiteCourseBindingSource.DataSource = typeof(SchoolManagementSystem.Models.OnsiteCourse);
@@ -266,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.LabelSearch);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.BtnAdd);

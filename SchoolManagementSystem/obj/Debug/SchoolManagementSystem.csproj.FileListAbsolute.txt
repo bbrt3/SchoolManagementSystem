@@ -24,3 +24,4 @@ C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSy
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.AdminDepartments.resources
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.AdminGrades.resources
 C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.InstructorGrades.resources
+C:\Users\User\source\repos\c#\WinForms\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UserControls.InstructorCourses.resources

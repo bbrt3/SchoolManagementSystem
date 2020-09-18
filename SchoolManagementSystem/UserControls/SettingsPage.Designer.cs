@@ -35,10 +35,10 @@
             // 
             this.LabelSettings.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelSettings.AutoSize = true;
-            this.LabelSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelSettings.Location = new System.Drawing.Point(324, 6);
+            this.LabelSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LabelSettings.Location = new System.Drawing.Point(230, 0);
             this.LabelSettings.Name = "LabelSettings";
-            this.LabelSettings.Size = new System.Drawing.Size(223, 63);
+            this.LabelSettings.Size = new System.Drawing.Size(191, 53);
             this.LabelSettings.TabIndex = 0;
             this.LabelSettings.Text = "Settings";
             this.LabelSettings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -47,10 +47,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.LabelSettings);
             this.Name = "SettingsPage";
-            this.Size = new System.Drawing.Size(890, 735);
+            this.Size = new System.Drawing.Size(674, 696);
             this.ResumeLayout(false);
             this.PerformLayout();
 

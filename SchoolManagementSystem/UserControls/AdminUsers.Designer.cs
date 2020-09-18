@@ -83,9 +83,10 @@
             this.courseDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.personBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 366);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 266);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(890, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(680, 436);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
@@ -162,9 +163,9 @@
             // LabelHeaderText
             // 
             this.LabelHeaderText.AutoSize = true;
-            this.LabelHeaderText.BackColor = System.Drawing.Color.OrangeRed;
+            this.LabelHeaderText.BackColor = System.Drawing.Color.Transparent;
             this.LabelHeaderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LabelHeaderText.Location = new System.Drawing.Point(239, 0);
+            this.LabelHeaderText.Location = new System.Drawing.Point(227, 0);
             this.LabelHeaderText.Name = "LabelHeaderText";
             this.LabelHeaderText.Size = new System.Drawing.Size(156, 53);
             this.LabelHeaderText.TabIndex = 1;
@@ -175,9 +176,9 @@
             // 
             this.BtnAddUser.BackColor = System.Drawing.Color.GreenYellow;
             this.BtnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddUser.Location = new System.Drawing.Point(248, 194);
+            this.BtnAddUser.Location = new System.Drawing.Point(257, 174);
             this.BtnAddUser.Name = "BtnAddUser";
-            this.BtnAddUser.Size = new System.Drawing.Size(115, 38);
+            this.BtnAddUser.Size = new System.Drawing.Size(90, 38);
             this.BtnAddUser.TabIndex = 6;
             this.BtnAddUser.Text = "Add new user";
             this.BtnAddUser.UseVisualStyleBackColor = false;
@@ -186,8 +187,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(43, 146);
+            this.label1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(31, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 3;
@@ -195,7 +196,7 @@
             // 
             // TxtFirstName
             // 
-            this.TxtFirstName.Location = new System.Drawing.Point(108, 143);
+            this.TxtFirstName.Location = new System.Drawing.Point(96, 113);
             this.TxtFirstName.Name = "TxtFirstName";
             this.TxtFirstName.Size = new System.Drawing.Size(72, 20);
             this.TxtFirstName.TabIndex = 0;
@@ -203,8 +204,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(43, 172);
+            this.label2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(31, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 3;
@@ -213,7 +214,7 @@
             // 
             // TxtLastName
             // 
-            this.TxtLastName.Location = new System.Drawing.Point(108, 169);
+            this.TxtLastName.Location = new System.Drawing.Point(96, 139);
             this.TxtLastName.Name = "TxtLastName";
             this.TxtLastName.Size = new System.Drawing.Size(72, 20);
             this.TxtLastName.TabIndex = 1;
@@ -227,9 +228,9 @@
             "Student",
             "Instructor",
             "Administrator"});
-            this.comboBoxDisc.Location = new System.Drawing.Point(269, 141);
+            this.comboBoxDisc.Location = new System.Drawing.Point(257, 111);
             this.comboBoxDisc.Name = "comboBoxDisc";
-            this.comboBoxDisc.Size = new System.Drawing.Size(62, 21);
+            this.comboBoxDisc.Size = new System.Drawing.Size(90, 21);
             this.comboBoxDisc.TabIndex = 2;
             this.comboBoxDisc.SelectedIndexChanged += new System.EventHandler(this.comboBoxDisc_SelectedIndexChanged);
             // 
@@ -237,17 +238,17 @@
             // 
             this.TxtPassword.AsciiOnly = true;
             this.TxtPassword.BeepOnError = true;
-            this.TxtPassword.Location = new System.Drawing.Point(269, 168);
+            this.TxtPassword.Location = new System.Drawing.Point(257, 138);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(62, 20);
+            this.TxtPassword.Size = new System.Drawing.Size(90, 20);
             this.TxtPassword.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(195, 146);
+            this.label3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(183, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 3;
@@ -256,8 +257,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.OrangeRed;
-            this.label4.Location = new System.Drawing.Point(195, 172);
+            this.label4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label4.Location = new System.Drawing.Point(183, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 3;
@@ -266,7 +267,7 @@
             // dateHireDate
             // 
             this.dateHireDate.Enabled = false;
-            this.dateHireDate.Location = new System.Drawing.Point(450, 140);
+            this.dateHireDate.Location = new System.Drawing.Point(438, 110);
             this.dateHireDate.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
             this.dateHireDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateHireDate.Name = "dateHireDate";
@@ -276,7 +277,7 @@
             // dateEnrollmentDate
             // 
             this.dateEnrollmentDate.Enabled = false;
-            this.dateEnrollmentDate.Location = new System.Drawing.Point(450, 165);
+            this.dateEnrollmentDate.Location = new System.Drawing.Point(438, 135);
             this.dateEnrollmentDate.Name = "dateEnrollmentDate";
             this.dateEnrollmentDate.Size = new System.Drawing.Size(191, 20);
             this.dateEnrollmentDate.TabIndex = 5;
@@ -284,8 +285,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.OrangeRed;
-            this.label5.Location = new System.Drawing.Point(366, 168);
+            this.label5.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label5.Location = new System.Drawing.Point(354, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 8;
@@ -294,8 +295,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(366, 146);
+            this.label6.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label6.Location = new System.Drawing.Point(354, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 9;
@@ -304,9 +305,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.OrangeRed;
+            this.label7.BackColor = System.Drawing.SystemColors.Desktop;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(265, 101);
+            this.label7.Location = new System.Drawing.Point(253, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 22);
             this.label7.TabIndex = 10;
@@ -315,7 +316,7 @@
             // panel1
             // 
             this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel1.Controls.Add(this.LabelHeaderText);
             this.panel1.Controls.Add(this.BtnSearch);
             this.panel1.Controls.Add(this.TxtSearch);
@@ -333,10 +334,9 @@
             this.panel1.Controls.Add(this.TxtLastName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 767);
+            this.panel1.Size = new System.Drawing.Size(674, 696);
             this.panel1.TabIndex = 11;
             // 
             // BtnSearch
@@ -344,9 +344,9 @@
             this.BtnSearch.BackColor = System.Drawing.Color.Green;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BtnSearch.Location = new System.Drawing.Point(46, 238);
+            this.BtnSearch.Location = new System.Drawing.Point(9, 226);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(75, 20);
+            this.BtnSearch.Size = new System.Drawing.Size(81, 20);
             this.BtnSearch.TabIndex = 12;
             this.BtnSearch.Text = "Search";
             this.BtnSearch.UseVisualStyleBackColor = false;
@@ -354,9 +354,9 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(133, 238);
+            this.TxtSearch.Location = new System.Drawing.Point(96, 226);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(508, 20);
+            this.TxtSearch.Size = new System.Drawing.Size(559, 20);
             this.TxtSearch.TabIndex = 11;
             // 
             // AdminUsers
@@ -364,11 +364,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "AdminUsers";
-            this.Size = new System.Drawing.Size(890, 767);
+            this.Size = new System.Drawing.Size(680, 702);
             this.Load += new System.EventHandler(this.AdminUsers_Load);
             this.Enter += new System.EventHandler(this.AdminUsers_Enter);
             this.Leave += new System.EventHandler(this.AdminUsers_Leave);
